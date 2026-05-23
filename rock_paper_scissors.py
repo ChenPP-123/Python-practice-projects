@@ -1,12 +1,19 @@
 import random as r
 
-choice_pool = ("r", "p", "s")
+Rock = "r"
+Paper = "p"
+Scissors = "s"
+choice_pool = (Rock, Paper, Scissors)
 
 
 def judge(a, b):
     if b == a:
         print("Tie!")
-    elif (a == "r" and b == "p") or (a == "s" and b == "r") or (a == "p" and b == "s"):
+    elif (
+        (a == Rock and b == Paper)
+        or (a == Scissors and b == Rock)
+        or (a == Paper and b == Scissors)
+    ):
         print(f"computer's choice is {b},you lose.")
     else:
         print(f"computer's choice is {b},you win.")
