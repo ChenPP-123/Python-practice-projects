@@ -18,9 +18,9 @@ def get_enter():
 def get_response(computer_guess):
     while True:
         response = input(
-            f"the computer's answer is {computer_guess}, is it too low(L), too high(H) or correct(C)?:"
-        )
-        if response in ("L", "H", "C"):
+            f"the computer's answer is {computer_guess}, is it too low(l), too high(h) or correct(c)?:"
+        ).lower()
+        if response in ("l", "h", "c"):
             return response
         else:
             print("Invalid input!")
@@ -38,18 +38,18 @@ while True:
     response = get_response(computer_guess)
 
     match response:
-        case "L":
+        case "l":
             if computer_guess < answer:
                 low = computer_guess + 1
             else:
                 print("Hey! Your responses are contradictory. Are you cheating?")
                 break
-        case "H":
+        case "h":
             if computer_guess > answer:
                 high = computer_guess - 1
             else:
                 print("Hey! Your responses are contradictory. Are you cheating?")
                 break
-        case "C":
+        case "c":
             print(f"answer is {computer_guess}!")
             break
