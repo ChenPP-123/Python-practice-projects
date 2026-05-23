@@ -19,7 +19,7 @@ def get_response(computer_guess):
     while True:
         response = input(
             f"the computer's answer is {computer_guess}, is it too low(L), too high(H) or correct(C)?:"
-        ).lower()
+        )
         if response in ("L", "H", "C"):
             return response
         else:
