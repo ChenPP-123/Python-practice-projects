@@ -31,5 +31,10 @@ def hangman():
         else:
             print("Invalid charactor, please try again.")
 
+    print(
+        "The word is :",
+        " ".join([letter if letter in used_letters else "-" for letter in word]),
+    )
+
 
 hangman()
